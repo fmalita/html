@@ -71542,22 +71542,6 @@ interface <dfn interface>TextCluster</dfn> {
     readonly attribute <span>CanvasTextBaseline</span> <span data-x="dom-TextCluster-baseline">baseline</span>;
 };
 
-dictionary <dfn dictionary>ImageDataSettings</dfn> {
-  <span>PredefinedColorSpace</span> <span data-x="dom-PredefinedColorSpace-srgb">colorSpace</span>;
-};
-
-[Exposed=(Window,Worker),
- <span>Serializable</span>]
-interface <dfn interface>ImageData</dfn> {
-  <span data-x="dom-imagedata">constructor</span>(unsigned long sw, unsigned long sh, optional <span>ImageDataSettings</span> settings = {});
-  <span data-x="dom-imagedata-with-data">constructor</span>(<span data-x="idl-Uint8ClampedArray">Uint8ClampedArray</span> data, unsigned long sw, optional unsigned long sh, optional <span>ImageDataSettings</span> settings = {});
-
-  readonly attribute unsigned long <span data-x="dom-imagedata-width">width</span>;
-  readonly attribute unsigned long <span data-x="dom-imagedata-height">height</span>;
-  readonly attribute <span data-x="idl-Uint8ClampedArray">Uint8ClampedArray</span> <span data-x="dom-imagedata-data">data</span>;
-  readonly attribute <span>PredefinedColorSpace</span> <span data-x="dom-imagedata-colorSpace">colorSpace</span>;
-};
-
 [Exposed=(Window,Worker)]
 interface <dfn interface>Path2D</dfn> {
   <span data-x="dom-Path2D">constructor</span>(optional (<span>Path2D</span> or DOMString) path);
@@ -75653,9 +75637,9 @@ try {
    baseline</span>. (Zero if the given baseline is the <span>ideographic-under
    baseline</span>.)</p></dd>
 
-   <dt>The <dfn method for="TextMetrics"><code data-x="dom-textmetrics-getSelectionRects">getSelectionRects(<var>start</var>, <var>end</var>)</code></dfn> method steps are:</dt>
+   <dt var-scope>The <dfn method for="TextMetrics"><code data-x="dom-textmetrics-getSelectionRects">getSelectionRects(<var>start</var>, <var>end</var>)</code></dfn> method steps are:</dt>
 
-   <dd>
+   <dd var-scope>
     <ol>
      <li><p>If either <var>start</var> or <var>end</var> are less than 0, <var>start</var> is
      greater or equal than the number of <span data-x="code point">code points</span> in the
@@ -75679,9 +75663,9 @@ try {
     </ol>
   </dd>
 
-   <dt>The <dfn method for="TextMetrics"><code data-x="dom-textmetrics-getActualBoundingBox">getActualBoundingBox(<var>start</var>, <var>end</var>)</code></dfn> method steps are:</dt>
+   <dt var-scope>The <dfn method for="TextMetrics"><code data-x="dom-textmetrics-getActualBoundingBox">getActualBoundingBox(<var>start</var>, <var>end</var>)</code></dfn> method steps are:</dt>
 
-   <dd>
+   <dd var-scope>
     <ol>
      <li><p>If either <var>start</var> or <var>end</var> are less than 0, <var>start</var> is
      greater or equal than the number of <span data-x="code point">code points</span> in the
@@ -75706,9 +75690,9 @@ try {
     with accents that go beyond the flow of text will have a different paint bounding box.</p>
    </dd>
 
-   <dt>The <dfn method for="TextMetrics"><code data-x="dom-textmetrics-getIndexFromOffset">getIndexFromOffset(<var>offset</var>)</code></dfn> method steps are:</dt>
+   <dt var-scope>The <dfn method for="TextMetrics"><code data-x="dom-textmetrics-getIndexFromOffset">getIndexFromOffset(<var>offset</var>)</code></dfn> method steps are:</dt>
 
-   <dd>
+   <dd var-scope>
     <ol>
      <li><p>Let <var>glyphs</var> be the result of the
      <span>text preparation algorithm</span> when <code
@@ -75725,9 +75709,9 @@ try {
     direction.</p>
    </dd>
 
-   <dt>The <dfn method for="TextMetrics"><code data-x="dom-textmetrics-getTextClusters-complete">getTextClusters(<var>options</var>)</code></dfn> method steps are:</dt>
+   <dt var-scope>The <dfn method for="TextMetrics"><code data-x="dom-textmetrics-getTextClusters-complete">getTextClusters(<var>options</var>)</code></dfn> method steps are:</dt>
 
-   <dd>
+   <dd var-scope>
    <ol>
     <li><p>Let <var>start</var> be 0.</p></li>
 
@@ -75738,9 +75722,9 @@ try {
    </ol>
    </dd>
 
-   <dt>The <dfn method for="TextMetrics"><code data-x="dom-textmetrics-getTextClusters">getTextClusters(<var>start</var>, <var>end</var>, <var>options</var>)</code></dfn> method steps are:</dt>
+   <dt var-scope>The <dfn method for="TextMetrics"><code data-x="dom-textmetrics-getTextClusters">getTextClusters(<var>start</var>, <var>end</var>, <var>options</var>)</code></dfn> method steps are:</dt>
 
-   <dd>
+   <dd var-scope>
     <ol>
      <li><p>If either <var>start</var> or <var>end</var> are less than 0, <var>start</var> is
      greater or equal than the number of <span data-x="code point">code points</span> in the
